@@ -1,18 +1,50 @@
-# Salesforce DX Project: Next Steps
+# Opportunity Report (Salesforce LWC)
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+Test task for **Junior JavaScript (Salesforce) Developer** position at CloudBudget.
 
-## How Do You Plan to Deploy Your Changes?
+---
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+## 🚀 Features
 
-## Configure Your Salesforce DX Project
+- Opportunity table (LWC datatable)
+- Filtering:
+  - Year
+  - Stage
+  - Close Date
+- Sorting by columns
+- Dynamic total calculation
+- Row actions:
+  - Edit (opens standard Salesforce edit page)
+  - Delete (via Apex)
+- Export to CSV (based on filtered data)
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+---
 
-## Read All About It
+## 🛠 Tech Stack
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+- **Salesforce LWC (Lightning Web Components)**
+- **Apex (server-side logic)**
+- JavaScript (ES6)
+
+---
+
+## ⚙️ How it works
+
+- Data is fetched from Salesforce via Apex controller
+- Filtering is handled on client-side (LWC)
+- Sorting is implemented manually in JS
+- Delete action calls Apex method and refreshes data
+- Export generates CSV from currently visible (filtered) records
+
+---
+
+## ⚠️ Notes
+
+- CSV export works correctly in Edge  
+- In Chrome, download may be blocked due to browser security restrictions in Lightning environment
+
+---
+
+## 👨‍💻 Author
+
+Dauren
